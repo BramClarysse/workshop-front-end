@@ -34,17 +34,52 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function sendHelloWorldRequest() {
     const outputElement = document.querySelector('#hello-world-output');
-    outputElement.textContent = 'No HTTP request made yet';
+
+    fetch('http://localhost:3000/helloworld')
+            .then(response => response.text())
+            .then(data => {
+                outputElement.textContent = data;
+            })
+            .catch(error => {
+                const outputElement = document.querySelector('#hello-world-output');
+                outputElement.textContent = 'Error: ' + error.message;
+
+                console.log(error);
+            });
 }
 
 function sendRandomNumberRequest() {
     const outputElement = document.querySelector('#random-number-output');
-    outputElement.textContent = 'No HTTP request made yet';
+
+    
+    fetch('http://localhost:3000/randomnumber')
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+                outputElement.textContent = data;
+            })
+            .catch(error => {
+                const outputElement = document.querySelector('#random-number-output');
+                outputElement.textContent = 'Error: ' + error.message;
+
+                console.log(error);
+            });
 }
 
 function sendCharLengthRequest() {
     const outputElement = document.querySelector('#char-length-output');
-    outputElement.textContent = 'No HTTP request made yet';
+    const inputElement = document.querySelector('#input-field');
+
+    fetch(`http://localhost:3000/howlongisthisstring?string=${inputElement.value}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            outputElement.textContent = data.length;
+        })
+        .catch(error => {
+            outputElement.textContent = 'Error: ' + error.message;
+            console.log(error);
+        });
 }
 
 function clearOutput(selector) {
