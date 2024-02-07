@@ -12,39 +12,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Random Number
-    const randomNumberReqButton = document.querySelector("#random-number-button");
-    const randomNumberClear = document.querySelector("#random-number-clear");
-    const randomNumberOutput = document.querySelector("#random-number-output");
-
-    randomNumberReqButton.addEventListener('click', sendRandomNumberRequest);
-    randomNumberClear.addEventListener('click', function() {
-        clearOutput(randomNumberOutput);
-    });
+    // Add the eventlisteners like in hello-world
 
     // Char Length
-    const charLengthReqButton = document.querySelector("#char-length-button");
-    const charLengthClear = document.querySelector("#char-length-clear");
-    const charLengthOutput = document.querySelector("#char-length-output");
+    // Add the eventlisteners like in hello-world
 
-    charLengthReqButton.addEventListener('click', sendCharLengthRequest);
-    charLengthClear.addEventListener('click', function() {
-        clearOutput(charLengthOutput);
-    });
 });
 
 function sendHelloWorldRequest() {
+    //make it a working http request, so clear the static code
     const outputElement = document.querySelector('#hello-world-output');
     outputElement.textContent = 'No HTTP request made yet';
 }
 
 function sendRandomNumberRequest() {
-    const outputElement = document.querySelector('#random-number-output');
-    outputElement.textContent = 'No HTTP request made yet';
+    //write your http request here (or split up into cleaner code)
 }
 
 function sendCharLengthRequest() {
-    const outputElement = document.querySelector('#char-length-output');
-    outputElement.textContent = 'No HTTP request made yet';
+    //write your http request with a parameter here (or split up into cleaner code)
 }
 
 function clearOutput(selector) {
