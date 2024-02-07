@@ -1,1 +1,116 @@
+body {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;   
 
+    width: 100vw;
+    height: 100vh;
+
+    background: linear-gradient(90deg, rgba(57,57,57,1) 0%, rgba(19,19,19,1) 100%);
+
+}
+.container {
+    width: 90%;
+    height: 30%;
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    background: linear-gradient(90deg, rgba(79,79,79,1) 0%, rgba(41,41,41,1) 100%);
+
+}
+
+.container div {
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+
+div h1 {
+    width: 50%;
+    text-align: center;
+
+    font-size: 200%;
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: white;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    width: 25%;
+    height: 200%;
+
+    border-radius: 5px;
+
+    background-color: lightgrey;
+
+    text-align: center;
+}
+
+.button {
+    width: 15%;
+    height: 250%;
+
+    text-align: center;
+    align-items: center;
+
+    background-color: grey;
+    color: white;
+
+    border: solid 1px grey;
+    border-radius: 15px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button:hover {
+    cursor: pointer;
+
+    background-color: darkgrey;
+}
+
+.result {
+    width: 25%;
+    height: 200%;
+
+}
+
+.output {
+    width: 100%;
+
+    border: solid 1px grey;
+    border-radius: 5px;
+
+    background-color: lightgrey;
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.clear-button {
+    height: 80%;
+
+    margin-left: 2%;
+    align-self: center;
+
+    background-color: grey;
+    color: white;
+
+    border: solid 1px grey;
+    border-radius: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clear-button:hover {
+    background-color: darkgray;
+    cursor: pointer;
+}
